@@ -1,0 +1,274 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<div class="container">
+		<header class="site-header">
+			<div class="header-left">[ ENTROPIC_LIMIT ]</div>
+			<div class="header-right">k: 1.38e-23</div>
+		</header>
+
+		<section class="hero">
+			<h1>THE LOWER BOUND OF COMPLEXITY</h1>
+			<p class="subhead">Investigating the thermodynamic and computational constraints of the vacuum state.</p>
+		</section>
+
+		<section class="research-archive">
+			<h2>// THE RESEARCH ARCHIVE</h2>
+
+			<details class="research-entry">
+				<summary>[2026] Cosmic Inflation as a Computational Phase Transition</summary>
+				<div class="details-content">
+					<p class="abstract">Abstract: The GUT scale is derived by treating inflation as a computational saturation event in the primordial vacuum. The inflationary epoch is characterized as an emergent entropy bound where pre-existing quantum states undergo catastrophic erasure. By applying Landauer's Principle to this information loss, this work demonstrates that the resulting thermalization naturally recovers the standard reheating temperature (T<sub>R</sub>) and scale-invariant density perturbations, offering a finite-resource resolution to the trans-Planckian problem without invoking eternal inflation.</p>
+					<a href="/papers/lowe-inflation-2026.pdf" class="download-btn">[ DOWNLOAD PDF ]</a>
+				</div>
+			</details>
+
+			<details class="research-entry">
+				<summary>[PRE] The Dark Halo: Galactic Rotation from Quantization Noise</summary>
+				<div class="details-content">
+					<p class="status">Status: In Preparation. Analysis of asymptotic velocity residuals in galactic dynamics. Preliminary findings suggest that dark matter halos may be explained as cumulative discretization errors in the vacuum metric. This paper proposes that flat rotation curves derive not from exotic particle content, but from the finite computational resolution of spacetime at macroscopic scales, behaving as an effective entropic force.</p>
+				</div>
+			</details>
+
+			<details class="research-entry">
+				<summary>[PRE] The Holographic Observer</summary>
+				<div class="details-content">
+					<p class="status">Status: In Preparation. Extending Bekenstein's holographic principle to the measurement limit. This work examines whether the observer constitutes a local information bottleneck subject to the Landauer limit, with implications for the Born rule and the emergence of wavefunction collapse as a data compression artifact.</p>
+				</div>
+			</details>
+		</section>
+
+		<footer class="site-footer">
+			<p>Independent Researcher: Arthur P. Lowe</p>
+			<p>Project ID: EL-2026-X</p>
+			<p>PGP Key: 
+				<a href="#pgp" class="pgp-link">0x9A2B...</a> /
+				<a href="/research-log.txt" class="pgp-link">[ SYSTEM_LOG ]</a> /
+			</p>
+		</footer>
+	</div>
+</Layout>
+
+<style>
+	.container {
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 40px 20px;
+	}
+
+	.site-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+		border-bottom: 1px solid #333;
+		margin-bottom: 60px;
+		font-weight: 600;
+		font-size: 13px;
+		letter-spacing: 0.5px;
+	}
+
+	.header-right {
+		color: #888;
+		font-size: 12px;
+	}
+
+	.hero {
+		margin-bottom: 80px;
+	}
+
+	h1 {
+		font-size: 28px;
+		font-weight: 600;
+		letter-spacing: -0.5px;
+		margin-bottom: 20px;
+		color: #FFFFFF;
+	}
+
+	.subhead {
+		font-size: 15px;
+		line-height: 1.7;
+		color: #999;
+	}
+
+	.research-archive {
+		margin-bottom: 80px;
+	}
+
+	h2 {
+		font-size: 13px;
+		font-weight: 500;
+		margin-bottom: 30px;
+		color: #666;
+		letter-spacing: 0.5px;
+	}
+
+	.research-entry {
+		border: 1px solid #333;
+		margin-bottom: 20px;
+		transition: border-color 0.2s ease;
+	}
+
+	.research-entry:hover {
+		border-color: #555;
+	}
+
+	.research-entry[open] {
+		border-color: #FF4500;
+	}
+
+	.research-entry summary {
+		padding: 18px 20px;
+		cursor: pointer;
+		font-size: 14px;
+		font-weight: 500;
+		user-select: none;
+		list-style: none;
+		transition: color 0.2s ease;
+	}
+
+	.research-entry summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.research-entry summary::before {
+		content: '+ ';
+		color: #FF4500;
+		margin-right: 8px;
+	}
+
+	.research-entry[open] summary::before {
+		content: '- ';
+	}
+
+	.research-entry summary:hover {
+		color: #FF4500;
+	}
+
+	.details-content {
+		padding: 0 20px 20px 20px;
+		border-top: 1px solid #333;
+		padding-top: 20px;
+		animation: fadeIn 0.3s ease;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.abstract {
+		font-size: 13px;
+		line-height: 1.8;
+		margin-bottom: 20px;
+		color: #AAA;
+	}
+
+	.status {
+		font-size: 13px;
+		margin-bottom: 15px;
+		color: #888;
+		font-style: italic;
+	}
+
+	.download-btn {
+		display: inline-block;
+		padding: 10px 16px;
+		border: 1px solid #FF4500;
+		color: #FF4500;
+		text-decoration: none;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.5px;
+		transition: all 0.2s ease;
+	}
+
+	.download-btn:hover {
+		background: #FF4500;
+		color: #000000;
+	}
+
+	.site-footer {
+		padding-top: 40px;
+		border-top: 1px solid #333;
+		font-size: 13px;
+		line-height: 1.9;
+		color: #666;
+	}
+
+	.site-footer p {
+		margin-bottom: 5px;
+	}
+
+	.pgp-link {
+		color: #888;
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.pgp-link:hover {
+		color: #FF4500;
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			padding: 30px 16px;
+		}
+
+		.site-header {
+			margin-bottom: 40px;
+			font-size: 11px;
+		}
+
+		.header-right {
+			font-size: 10px;
+		}
+
+		h1 {
+			font-size: 22px;
+		}
+
+		.subhead {
+			font-size: 14px;
+		}
+
+		.hero {
+			margin-bottom: 60px;
+		}
+
+		.research-entry summary {
+			padding: 16px;
+			font-size: 13px;
+		}
+
+		.details-content {
+			padding: 16px;
+			padding-top: 16px;
+		}
+
+		.abstract {
+			font-size: 12px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		h1 {
+			font-size: 19px;
+			letter-spacing: -0.3px;
+		}
+
+		.site-header {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 8px;
+		}
+	}
+</style>
